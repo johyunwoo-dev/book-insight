@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Insight - 기록</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-content">
+        <a class="logo" href="./index.html">Book Insight</a>
+        <nav class="navigation">
+          <ul class="nav-list">
+            <li><a href="./index.html">홈</a></li>
+            <li><a href="./insight.html">북 인사이트</a></li>
+            <li><a href="./storage.html">보관함</a></li>
+            <li><a href="./record.html">기록</a></li>
+            <li><a href="./login.html">로그인</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button">☾</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-hero-section">
+        <div class="container page-hero">
+          <p class="hero-subtitle">읽고 난 뒤 생각</p>
+          <h1 class="hero-title">한 줄 인사이트 기록</h1>
+          <p class="hero-description">
+            책을 읽고 남은 감상과 질문을 짧게 적어둡니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="record-section">
+        <div class="container record-layout">
+          <div class="record-intro">
+            <p class="section-kicker">작성</p>
+            <h2 class="section-title">오늘의 기록</h2>
+            <p class="section-description">지금 생각부터 적어보세요.</p>
+          </div>
+          <div class="record-workspace">
+            <div class="record-form">
+              <textarea
+                class="record-textarea"
+                placeholder="오늘 책에서 남은 생각을 적어보세요."
+              ></textarea>
+              <button class="record-button" type="button" disabled>
+                기록 저장
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="record-list-section">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">목록</p>
+            <h2 class="section-title">남긴 기록</h2>
+          </div>
+          <div class="record-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© 2026 Book Insight</p>
+      </div>
+    </footer>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/record.js"></script>
+  </body>
+</html>

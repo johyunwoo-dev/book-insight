@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Insight - 보관함</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/card.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-content">
+        <a class="logo" href="./index.html">Book Insight</a>
+        <nav class="navigation">
+          <ul class="nav-list">
+            <li><a href="./index.html">홈</a></li>
+            <li><a href="./insight.html">북 인사이트</a></li>
+            <li><a href="./storage.html">보관함</a></li>
+            <li><a href="./record.html">기록</a></li>
+            <li><a href="./login.html">로그인</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button">☾</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-hero-section">
+        <div class="container page-hero">
+          <p class="hero-subtitle">다시 읽고 싶은 문장들</p>
+          <h1 class="hero-title">인사이트 보관함</h1>
+          <p class="hero-description">
+            저장해 둔 카드를 모아보고, 더는 필요 없는 문장은 가볍게 정리하세요.
+          </p>
+        </div>
+      </section>
+
+      <section class="storage-section">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">저장됨</p>
+            <h2 class="section-title">저장한 카드</h2>
+          </div>
+          <div class="card-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© 2026 Book Insight</p>
+      </div>
+    </footer>
+
+    <script src="./js/books.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/storage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Insight - 로그인</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-content">
+        <a class="logo" href="./index.html">Book Insight</a>
+        <nav class="navigation">
+          <ul class="nav-list">
+            <li><a href="./index.html">홈</a></li>
+            <li><a href="./insight.html">북 인사이트</a></li>
+            <li><a href="./storage.html">보관함</a></li>
+            <li><a href="./record.html">기록</a></li>
+            <li><a href="./login.html">로그인</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button">☾</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="login-section">
+        <div class="container login-layout">
+          <div class="login-copy">
+            <p class="section-kicker">계정</p>
+            <h1 class="login-title">로그인</h1>
+            <p class="section-description">
+              계정 입력과 비밀번호 보기 기능을 확인할 수 있는 화면입니다.
+            </p>
+          </div>
+          <form class="login-card login-form">
+            <div class="input-group">
+              <label for="email">아이디 또는 이메일</label>
+              <input
+                type="email"
+                id="email"
+                class="login-input"
+                placeholder="example@email.com"
+                autocomplete="username"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="password">비밀번호</label>
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  class="login-input"
+                  placeholder="비밀번호 입력"
+                  autocomplete="current-password"
+                />
+                <button type="button" class="password-toggle">보기</button>
+              </div>
+            </div>
+
+            <button type="submit" class="login-button" disabled>로그인</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© 2026 Book Insight</p>
+      </div>
+    </footer>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/login.js"></script>
+  </body>
+</html>

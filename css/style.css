@@ -42,7 +42,7 @@ html {
 body {
     min-height: 100vh;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     font-family: "Paperlogy", sans-serif;
     background-color: var(--color-background);
     color: var(--color-text);

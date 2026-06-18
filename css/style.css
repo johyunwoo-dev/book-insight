@@ -1,21 +1,63 @@
+/* =========================
+외부 폰트 불러오기
+   ========================= */
+
+/* SUIT 폰트 로드 */
 @import url("https://cdn.jsdeliver.net/gh/fonts-archive/SUIT/SUIT.css");
+
+/* Paperlogy 폰트 로드 */
 @import url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Paperlogy.css");
 
+
+/* =========================
+전역 CSS 변수 (라이트 모드)
+   ========================= */
+
 :root {
+    /* 메인 색상 */
     --color-primary: #1E2A38;
+
+    /* 페이지 배경색 */
     --color-background: #F5F1EA;
+
+    /* 카드 배경색 */
     --color-card: #FFFFFF;
+
+    /* 헤더 배경색 */
     --color-header: #FFFFFF;
+
+    /* 테두리 색상 */
     --color-border: #D9D9D9;
+
+    /* 강조 색상 */
     --color-accent: #7C9A92;
+
+    /* 기본 텍스트 색상 */
     --color-text: #333333;
+
+    /* 보조 텍스트 색상 */
     --color-sub-text: #666666;
+
+    /* 보조 버튼 색상 */
     --color-button-secondary: #E9ECEF;
+
+    /* 최대 콘텐츠 너비 */
     --container-width: 1120px;
+
+    /* 기본 둥근 모서리 */
     --radius-md: 12px;
+
+    /* 기본 큰 간격 */
     --spacing-lg: 24px;
+
+    /* 공통 그림자 */
     --shadow-soft: 0 10px 25px rgba(30, 42, 56, 0.08);
 }
+
+
+/* =========================
+다크 모드 변수 재정의
+   ========================= */
 
 body.dark-mode {
     --color-primary: #E9ECEF;
@@ -29,33 +71,59 @@ body.dark-mode {
     --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.32);
 }
 
+
+/* =========================
+CSS 초기화 (Reset)
+   ========================= */
+
 * {
     margin: 0;
     padding: 0;
+
+    /* padding과 border를 width 계산에 포함 */
     box-sizing: border-box;
 }
 
 html {
+    /* 앵커 이동 시 부드러운 스크롤 */
     scroll-behavior: smooth;
 }
 
+
+/* =========================
+body 기본 설정
+   ========================= */
+
 body {
     height: 100vh;
+
+    /* 헤더-본문-푸터 세로 배치 */
     display: flex;
     flex-direction: column;
+
     font-family: "Paperlogy", sans-serif;
+
     background-color: var(--color-background);
     color: var(--color-text);
+
     line-height: 1.6;
+
     transition: background-color 0.3s, color 0.3s;
 }
+
+
+/* =========================
+공통 요소 스타일
+   ========================= */
 
 a {
     color: var(--color-text);
     text-decoration: none;
 }
 
-button, input, textarea {
+button,
+input,
+textarea {
     font-family: "Paperlogy", sans-serif;
 }
 
@@ -70,18 +138,35 @@ button:disabled {
     opacity: 0.5;
 }
 
+
+/* =========================
+공통 컨테이너
+   ========================= */
+
 .container {
     width: 100%;
     max-width: var(--container-width);
+
+    /* 가운데 정렬 */
     margin: 0 auto;
+
+    /* 좌우 여백 */
     padding: 0 24px;
 }
+
+
+/* =========================
+헤더 영역
+   ========================= */
 
 .header {
     position: sticky;
     top: 0;
     z-index: 20;
+
     border-bottom: 1px solid var(--color-border);
+
+    /* 스크롤 시 상단 고정 */
     background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -91,54 +176,84 @@ body.dark-mode .header {
 
 .header-content {
     min-height: 76px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: var(--spacing-lg);
 }
 
+/* 사이트 로고 */
 .logo {
     color: var(--color-primary);
+
     font-family: "SUIT", sans-serif;
     font-size: 30px;
     font-weight: 800;
 }
 
+
+/* =========================
+네비게이션 메뉴
+   ========================= */
+
 .nav-list {
     display: flex;
     align-items: center;
     gap: 8px;
+
     list-style: none;
 }
 
 .nav-list a {
     display: flex;
     align-items: center;
+
     height: 38px;
     padding: 0 12px;
+
     border-radius: 20px;
+
     color: var(--color-sub-text);
+
     font-size: 15px;
+
     transition: background-color 0.2s, color 0.2s;
 }
 
-.nav-list a:hover, .nav-list[aria-current="page"] {
+/* 메뉴 hover 또는 현재 페이지 */
+.nav-list a:hover,
+.nav-list[aria-current="page"] {
     background-color: var(--color-button-secondary);
     color: var(--color-text);
 }
 
+
+/* =========================
+다크모드 토글 버튼
+   ========================= */
+
 .theme-toggle {
     width: 42px;
     height: 42px;
+
     border: 1px solid var(--color-border);
     border-radius: 50%;
+
     font-size: 20px;
+
     transition: transform 0.2s;
 }
 
 .theme-toggle:hover {
     transform: scale(1.05);
 }
+
+
+/* =========================
+섹션 공통 스타일
+   ========================= */
 
 section {
     padding: 60px 0;
@@ -152,6 +267,11 @@ section {
     border-bottom: 1px solid var(--color-border);
 }
 
+
+/* =========================
+히어로 영역
+   ========================= */
+
 .hero-layout {
     display: grid;
     align-items: center;
@@ -162,13 +282,18 @@ section {
     max-width: 720px;
 }
 
-.hero-subtitle, .section-kicker, .question-label {
+.hero-subtitle,
+.section-kicker,
+.question-label {
     color: var(--color-accent);
     font-size: 14px;
     font-weight: 700;
 }
 
-.hero-title, .section-title, .question-title, .login-title {
+.hero-title,
+.section-title,
+.question-title,
+.login-title {
     font-family: "SUIT", sans-serif;
     color: var(--color-primary);
     font-weight: 800;
@@ -176,21 +301,33 @@ section {
 
 .hero-title {
     margin: 10px 0 18px;
+
     font-size: 64px;
     line-height: 1.1;
 }
 
-.hero-description, .section-description {
+.hero-description,
+.section-description {
     max-width: 640px;
+
     color: var(--color-sub-text);
+
     font-size: 16px;
 }
 
+
+/* =========================
+질문 카드
+   ========================= */
+
 .question-panel {
     padding: 28px 32px;
+
     border: 1px solid var(--color-accent);
     border-radius: var(--radius-md);
+
     background-color: var(--color-card);
+
     box-shadow: var(--shadow-soft);
 }
 
@@ -200,15 +337,25 @@ section {
     line-height: 1.4;
 }
 
+
+/* =========================
+검색 영역
+   ========================= */
+
 .search-section {
     padding: 40px 0;
+
     background-color: var(--color-card);
+
     border-bottom: 1px solid var(--color-border);
 }
 
 .search-layout {
     display: grid;
+
+    /* 좌측 설명 + 우측 검색 */
     grid-template-columns: 1fr 2fr;
+
     align-items: center;
     gap: var(--spacing-lg);
 }
@@ -218,58 +365,88 @@ section {
     gap: 12px;
 }
 
-.search-input, .login-input, .record-input {
+
+/* =========================
+입력창 공통
+   ========================= */
+
+.search-input,
+.login-input,
+.record-input {
     width: 100%;
+
     border: 2px solid var(--color-border);
     border-radius: var(--radius-md);
+
     background-color: var(--color-card);
     color: var(--color-text);
+
     outline: none;
+
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.search-input, .login-input {
+.search-input,
+.login-input {
     height: 48px;
     padding: 0 16px;
 }
 
+/* 입력창 포커스 효과 */
 .search-input:focus,
 .login-input:focus,
 .record-input:focus {
     border-color: var(--color-accent);
+
     box-shadow: 0 0 0 3px rgba(124, 154, 146, 0.2);
 }
 
+
+/* =========================
+버튼 공통
+   ========================= */
+
 .search-button,
 .record-button,
-.login-button, 
-.save-button, 
-.share-button, 
-.remove-button, 
+.login-button,
+.save-button,
+.share-button,
+.remove-button,
 .record-delete-button {
     height: 44px;
     padding: 0 18px;
+
     border-radius: var(--radius-md);
+
     font-size: 14px;
     font-weight: 700;
+
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.search-button, .record-button, .login-button, .save-button {
+/* 기본 액션 버튼 */
+.search-button,
+.record-button,
+.login-button,
+.save-button {
     background-color: var(--color-primary);
     color: #FFFFFF;
 }
 
+/* 보조 버튼 */
 .share-button {
     background-color: var(--color-button-secondary);
     color: var(--color-text);
 }
 
-.remove-button, .record-delete-button {
+/* 삭제 버튼 */
+.remove-button,
+.record-delete-button {
     background-color: var(--color-accent);
     color: #FFFFFF;
 }
 
+/* 버튼 hover 효과 */
 .search-button:hover,
 .record-button:hover,
 .login-button:hover,
@@ -281,64 +458,101 @@ section {
     box-shadow: var(--shadow-soft);
 }
 
+
+/* =========================
+태그 필터
+   ========================= */
+
 .tag-list {
     grid-column: 2;
+
     display: flex;
     flex-wrap: wrap;
+
     gap: 10px;
 }
 
 .tag-button {
     height: 36px;
     padding: 0 14px;
+
     border: 1px solid var(--color-border);
     border-radius: 20px;
+
     background-color: transparent;
+
     color: var(--color-text);
+
     font-size: 14px;
     font-weight: 700;
-    transition: all 0.2s;
 }
 
-.tag-button:hover, .tag-button.is-active {
-    transform: scale(1.03);
+.tag-button:hover,
+.tag-button.is-active {
     background-color: var(--color-accent);
     color: #FFFFFF;
+
+    transform: scale(1.03);
 }
 
-.record-layout, .login-layout {
+
+/* =========================
+기록/로그인 레이아웃
+   ========================= */
+
+.record-layout,
+.login-layout {
     display: grid;
+
     grid-template-columns: 1fr 1.5fr;
+
     gap: 40px;
+
     align-items: start;
 }
 
-.home-record {
-    border-top: 1px solid var(--color-border);
-}
-
-.record-intro, .login-copy {
+.record-intro,
+.login-copy {
     position: sticky;
+
+    /* 스크롤 시 일정 위치 유지 */
     top: 100px;
 }
 
-.record-workspace, .login-card {
+
+/* =========================
+카드형 컨테이너
+   ========================= */
+
+.record-workspace,
+.login-card {
     padding: 24px;
+
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
+
     background-color: var(--color-card);
+
     box-shadow: var(--shadow-soft);
 }
+
+
+/* =========================
+기록 작성 폼
+   ========================= */
 
 .record-form {
     display: flex;
     flex-direction: column;
+
     gap: 14px;
 }
 
 .record-textarea {
     min-height: 140px;
+
     padding: 14px;
+
     resize: vertical;
 }
 
@@ -346,24 +560,31 @@ section {
     align-self: flex-start;
 }
 
+
+/* =========================
+기록 목록
+   ========================= */
+
 .record-list {
     display: grid;
     gap: var(--spacing-lg);
 }
 
-.compact-record-list {
-    margin-top: 20px;
-}
-
 .record-item {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
     gap: var(--spacing-lg);
+
     padding: 16px;
+
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
+
     background-color: var(--color-card);
+
     animation: fadeSlide 0.3s ease-out;
 }
 
@@ -371,8 +592,14 @@ section {
     white-space: pre-wrap;
 }
 
+
+/* =========================
+로그인 영역
+   ========================= */
+
 .login-section {
     min-height: 70vh;
+
     display: flex;
     align-items: center;
 }
@@ -393,10 +620,14 @@ section {
 }
 
 .input-group label {
-    color: var(--color-text);
     font-size: 14px;
     font-weight: 700;
 }
+
+
+/* =========================
+비밀번호 보기 버튼
+   ========================= */
 
 .password-wrapper {
     position: relative;
@@ -408,70 +639,104 @@ section {
 
 .password-toggle {
     position: absolute;
+
     top: 50%;
     right: 8px;
+
     width: 54px;
     height: 32px;
+
     border-radius: 16px;
+
     background-color: var(--color-button-secondary);
-    color: var(--color-text);
-    font-size: 12px;
-    font-weight: 700;
+
     transform: translateY(-50%);
 }
 
+
+/* =========================
+링크 / 안내 메시지
+   ========================= */
+
 .text-link {
     display: inline-block;
+
     margin-top: 16px;
-    color: var(--color-primary);
+
     font-weight: 800;
     text-decoration: underline;
 }
 
 .empty-message {
     padding: 40px 24px;
+
     border: 2px dashed var(--color-border);
     border-radius: var(--radius-md);
-    color: var(--color-sub-text);
+
     text-align: center;
 }
 
+
+/* =========================
+토스트 알림
+   ========================= */
+
 .toast {
     position: fixed;
+
     right: 24px;
     bottom: 24px;
+
     z-index: 50;
+
     width: calc(100% - 48px);
     max-width: 360px;
+
     padding: 14px 16px;
+
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
+
     box-shadow: var(--shadow-soft);
-    color: var(--color-text);
-    font-size: 14px;
+
     animation: fadeSlide 0.3s ease-out;
 }
 
+
+/* =========================
+푸터
+   ========================= */
+
 .footer {
     margin-top: auto;
+
     padding: 30px 0;
+
     border-top: 1px solid var(--color-border);
+
     background-color: var(--color-card);
 }
 
 .footer-content {
     display: flex;
     justify-content: center;
+
     gap: 16px;
-    color: var(--color-sub-text);
+
     font-size: 12px;
 }
+
+
+/* =========================
+등장 애니메이션
+========================= */
 
 @keyframes fadeSlide {
     from {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

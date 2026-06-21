@@ -377,16 +377,6 @@ section {
     padding: 0 16px;
 }
 
-/* 입력창 포커스 효과 */
-.search-input:focus,
-.login-input:focus,
-.record-input:focus {
-    border-color: var(--color-accent);
-
-    box-shadow: 0 0 0 3px rgba(124, 154, 146, 0.2);
-}
-
-
 /* =========================
 버튼 공통
    ========================= */

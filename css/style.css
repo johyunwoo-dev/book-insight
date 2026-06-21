@@ -160,13 +160,12 @@ button:disabled {
    ========================= */
 
 .header {
+    /* 스크롤 시 상단 고정 */
     position: sticky;
     top: 0;
-    z-index: 20;
 
     border-bottom: 1px solid var(--color-border);
 
-    /* 스크롤 시 상단 고정 */
     background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -207,9 +206,6 @@ body.dark-mode .header {
 }
 
 .nav-list a {
-    display: flex;
-    align-items: center;
-
     height: 38px;
     padding: 0 12px;
 
@@ -223,8 +219,7 @@ body.dark-mode .header {
 }
 
 /* 메뉴 hover 또는 현재 페이지 */
-.nav-list a:hover,
-.nav-list[aria-current="page"] {
+.nav-list a:hover {
     background-color: var(--color-button-secondary);
     color: var(--color-text);
 }
@@ -271,12 +266,6 @@ section {
 /* =========================
 히어로 영역
    ========================= */
-
-.hero-layout {
-    display: grid;
-    align-items: center;
-    gap: var(--spacing-lg);
-}
 
 .hero-copy {
     max-width: 720px;

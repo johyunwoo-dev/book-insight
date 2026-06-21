@@ -1,41 +1,41 @@
 @media screen and (max-width: 1024px) {
-    /* 옆으로 나열된 큰 화면 레이아웃들을 위아래 1줄로 세우기 */
+    /* tablet layout */
     .hero-layout,
     .record-layout,
     .login-layout {
         grid-template-columns: 1fr; /* 1칸으로 변경하여 세로 정렬 */
     }
 
-    /* 구석에 고정(sticky)되어 스크롤을 따라오던 상자들을 평범하게 흐르게 두기 */
+    /* remove sticky */
     .question-panel,
     .record-intro,
     .login-copy {
         position: static; /* 고정 효과를 풀고 일반적인 배치로 환원 */
     }
 
-    /* 검색창 영역 위아래 한 줄로 배정하기 */
+    /* search layout */
     .search-layout {
         grid-template-columns: 1fr;
     }
 
-    /* 태그 목록이 가로 2번째 칸을 차지하던 규칙을 없애고 자연스럽게 한 행으로 넘기기 */
+    /* tag wrap */
     .tag-list {
         grid-column: auto;
     }
 
-    /* 기획서 준수: 너무 컸던 대형 메인 제목 글씨 크기를 단계별로 축소 */
+    /* title size */
     .hero-title {
         font-size: 54px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    /* 글씨가 화면 벽에 바짝 붙지 않도록 전체 바구니 양옆에 적당한 여백(18px) 주기 */
+    /* container padding */
     .container {
         padding: 0 18px;
     }
 
-    /* 상단 헤더 메뉴들의 가로 공간이 부족해지면 깨지지 않고 아래로 부드럽게 줄바꿈하기 */
+    /* header wrap */
     .header-content {
         min-height: auto;
         flex-wrap: wrap; /* 넘치면 아랫줄로 넘김 */
@@ -43,20 +43,20 @@
         gap: 16px;
     }
 
-    /* 로고보다 메뉴(Navigation)가 한 줄 밑으로 완전히 내려가도록 정렬 순서 뒤로 밀기 */
+    /* nav position */
     .navigation {
         order: 3;
         width: 100%;
     }
 
-    /* 메뉴 개수가 너무 많으면 화면 밖으로 터지지 않고 손가락으로 밀어서 보게 가로 스크롤 만들기 */
+    /* nav scroll */
     .nav-list {
         justify-content: flex-start;
         overflow-x: auto; /* 가로 스크롤 활성화 */
         padding-bottom: 2px;
     }
 
-    /* 화면이 작아졌으니 각 구역(Section)들의 위아래 넓었던 여백 줄이기 */
+    /* section spacing */
     section {
         padding: 58px 0;
     }
@@ -71,7 +71,7 @@
         padding: 62px 0 48px;
     }
 
-    /* 기획서 준수: 메인 대형 제목 글씨 크기를 폰 맞춤형(42px)으로 한 번 더 축소 */
+    /*메인 대형 제목 글씨 크기를 폰 맞춤형(42px)으로 한 번 더 축소 */
     .hero-title,
     .page-hero .hero-title {
         font-size: 42px;
@@ -83,7 +83,7 @@
         width: 100%;
     }
 
-    /* 초급자 맞춤: 복잡한 투명도 함수(rgba) 대신 기획서 지정 'Soft Gray' 테두리와 백그라운드로 변경 */
+    /* question panel */
     .question-panel {
         margin-top: 8px;
         padding: 24px 22px;
@@ -96,7 +96,7 @@
         background-image: none; /* 배경 무늬 삭제 */
     }
 
-    /* 복잡했던 가상 요소(before, after) 자잘한 장식이나 아이콘 강제로 숨기기 */
+    /* hide decoration */
     .question-panel::before,
     .question-panel::after {
         display: none;
@@ -107,7 +107,7 @@
         font-size: 28px;
     }
 
-    /* 검색창 입력 칸과 버튼을 가로가 아닌 위아래 세로로 나란히 세우기 */
+    /* search column */
     .search-box {
         flex-direction: column;
     }
@@ -117,12 +117,12 @@
         width: 100%;
     }
 
-    /* 초급자 맞춤: 이전 단계에서 정한 3분할, 2분할 그리드를 무조건 세로 1줄 정렬로 단순화 */
+    /* single column */
     .card-grid {
         grid-template-columns: 1fr;
     }
 
-    /* 가로형 카드 내부 내용물 높이가 똑같이 일직선으로 맞춰지도록 쭉 늘려 채우기 */
+    /* card stretch */
     .book-card {
         align-items: stretch;
     }
@@ -133,17 +133,17 @@
         padding: 22px;
     }
 
-    /* 저장된 기록 목록 아이템들을 위아래 한 줄씩 차곡차곡 쌓기 */
+    /* record stack */
     .record-item {
         grid-template-columns: 1fr;
     }
 
-    /* 한 줄을 혼자 다 쓰게 된 기록 삭제 버튼 가로로 길게 꽉 채우기 */
+    /* delete button */
     .record-delete-button {
         width: 100%;
     }
 
-    /* 맨 밑바닥 푸터 안내문 글씨(학번, 이름, 카피라이트 등)를 세로로 나란히 줄 세우기 */
+    /* footer layout */
     .footer-content {
         flex-direction: column;
         gap: 8px;
@@ -156,7 +156,7 @@
         font-size: 26px;
     }
 
-    /* 기획서 준수: 소형 스마트폰에 맞춰 메인 제목 글씨 최종 축소(36px) */
+    /* mobile title */    
     .hero-title,
     .page-hero .hero-title {
         font-size: 36px;

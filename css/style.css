@@ -464,7 +464,6 @@ section {
     right: 24px;
     bottom: 24px;
 
-    width: calc(100% - 48px);
     max-width: 360px;
 
     padding: 14px 16px;

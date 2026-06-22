@@ -1,16 +1,16 @@
-/* 책 목록, 입력창, 검색 버튼 등 화면 요소 찾아오기 */
+/* elements */
 const cardGrid = document.querySelector(".card-grid");
 const searchInput = document.querySelector(".search-input");
 const searchButton = document.querySelector(".search-button");
 const tagButtons = document.querySelectorAll(".tag-button");
 const questionElement = document.querySelector(".question-title");
 
-/* 저장된 책 목록 브라우저에서 불러오기 */
+/* saved books */
 function getSavedBooks() {
     return JSON.parse(localStorage.getItem("savedBooks") || "[]");
 }
 
-/* 선택한 책을 브라우저 보관함에 저장하기 */
+/* save */
 function saveBook(bookId) {
     const savedBooks = getSavedBooks();
 
@@ -24,7 +24,7 @@ function saveBook(bookId) {
     showToast("보관함에 저장했습니다.");
 }
 
-/* 핵심 문장을 클립보드에 자동으로 복사하기 */
+/* copy */
 async function copyQuote(quote) {
     try {
         await navigator.clipboard.writeText(quote);
@@ -34,7 +34,7 @@ async function copyQuote(quote) {
     }
 }
 
-/* 데이터로 책 카드 모양의 HTML 태그 만들기 */
+/* card template */
 function createBookCard(book) {
     const card = document.createElement("article");
     card.className = "book-card";
@@ -61,12 +61,12 @@ function createBookCard(book) {
         </div>
     `;
 
-    /* 카드 열고 닫는 토글 기능 */
+    /* toggle */
     const toggleCard = () => {
         card.classList.toggle("active");
     };
 
-    /* 클릭하거나 엔터/스페이스바 누르면 카드 열고 닫기 */
+    /* keyboard */
     card.addEventListener("click", toggleCard);
     card.addEventListener("keydown", (event) => {
         if (event.key === "Enter" || event.key === " ") {
@@ -75,13 +75,13 @@ function createBookCard(book) {
         }
     });
 
-    /* 저장 버튼 클릭 시 카드 열림을 막고 저장하기 */
+    /* save button */
     card.querySelector(".save-button").addEventListener("click", (event) => {
         event.stopPropagation();
         saveBook(book.id);
     });
 
-    /* 공유 버튼 클릭 시 카드 열림을 막고 문장 복사하기 */
+    /* share button */
     card.querySelector(".share-button").addEventListener("click", (event) => {
         event.stopPropagation();
         copyQuote(book.quote);
@@ -90,7 +90,7 @@ function createBookCard(book) {
     return card;
 }
 
-/* 화면에 책 카드 목록을 싹 그려주기 */
+/* render */
 function renderBooks(bookData) {
     if (!cardGrid) {
         return;
@@ -98,26 +98,24 @@ function renderBooks(bookData) {
 
     cardGrid.innerHTML = "";
 
-    /* 검색 결과가 없을 때 안내 문구 띄우기 */
     if (bookData.length === 0) {
         cardGrid.innerHTML = '<p class="empty-message">찾는 카드가 없습니다.</p>';
         return;
     }
 
-    /* 각 책 데이터를 카드로 만들어 화면에 붙이기 */
     bookData.forEach((book) => {
         cardGrid.appendChild(createBookCard(book));
     });
 }
 
-/* 선택한 태그 버튼만 강조 표시하기 */
+/* active tag */
 function setActiveTag(selectedButton) {
     tagButtons.forEach((button) => {
         button.classList.toggle("is-active", button === selectedButton);
     });
 }
 
-/* 입력한 글자로 제목, 저자, 태그, 문장 검색하기 */
+/* search */
 function handleSearch() {
     const searchValue = searchInput.value.trim().toLowerCase();
 
@@ -136,7 +134,7 @@ function handleSearch() {
     setActiveTag(null);
 }
 
-/* 검색 버튼 클릭이나 엔터키 입력 시 검색 실행하기 */
+/* search events */
 if (searchButton && searchInput) {
     searchButton.addEventListener("click", handleSearch);
     searchInput.addEventListener("keydown", (event) => {
@@ -146,7 +144,7 @@ if (searchButton && searchInput) {
     });
 }
 
-/* 태그 버튼 누르면 해당 카테고리 책만 골라 보여주기 */
+/* tag filter */
 tagButtons.forEach((button) => {
     button.addEventListener("click", () => {
         const selectedTag = button.textContent.trim();
@@ -156,7 +154,7 @@ tagButtons.forEach((button) => {
     });
 });
 
-/* 첫 화면 질문 상자에 들어갈 랜덤 문장 세트 */
+/* question list */
 const questions = [
     "오늘 가장 오래 남은 문장은?",
     "이 책은 어떤 감정을 남겼나요?",
@@ -165,11 +163,10 @@ const questions = [
     "다시 읽고 싶은 문장이 있나요?"
 ];
 
-/* 페이지 열릴 때 질문 무작위로 하나 골라 띄우기 */
+/* random question */
 if (questionElement) {
     const randomIndex = Math.floor(Math.random() * questions.length);
     questionElement.textContent = questions[randomIndex];
 }
 
-/* 맨 처음 페이지 로드 시 전체 책 목록 보여주기 */
 renderBooks(books);

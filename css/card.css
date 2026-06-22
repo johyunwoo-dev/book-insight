@@ -134,8 +134,6 @@
 }
 /*detail*/
 .card-detail {
-    display: none;
-
     margin-top: 16px;
 
     opacity: 0;

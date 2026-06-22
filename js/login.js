@@ -18,7 +18,6 @@ if (passwordToggle) {
         const isPassword = passwordInput.type === "password";
         passwordInput.type = isPassword ? "text" : "password";
         passwordToggle.textContent = isPassword ? "숨김" : "보기";
-        passwordToggle.setAttribute("aria-label", isPassword ? "비밀번호 숨기기" : "비밀번호 보기");
     });
 }
 

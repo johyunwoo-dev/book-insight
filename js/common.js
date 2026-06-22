@@ -7,7 +7,6 @@ function applyTheme(isDarkMode) {
 
     if (themeToggle) {
         themeToggle.textContent = isDarkMode ? "☼" : "☾";
-        themeToggle.setAttribute("aria-pressed", String(isDarkMode));
     }
 }
 

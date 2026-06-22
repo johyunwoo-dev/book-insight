@@ -1,5 +1,5 @@
 /* tablet */
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
 
     /* single column layout */
     .hero-layout,
@@ -31,7 +31,7 @@
 }
 
 /* mobile */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
     /* container */
     .container {
@@ -145,7 +145,7 @@
 }
 
 /* small mobile */
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
 
     /* logo */
     .logo {

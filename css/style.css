@@ -53,7 +53,7 @@ html {
 }
 /*page layout*/
 body {
-    min-height: 100vh;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -295,7 +295,7 @@ section {
 .share-button:hover,
 .remove-button:hover,
 .record-delete-button:hover {
-    transform: scale(1.03);
+    transform: scale(1.03); 
     box-shadow: var(--shadow-soft);
 }
 /*tag-button*/

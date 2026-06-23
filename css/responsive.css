@@ -94,11 +94,6 @@
         background-image: none;
     }
 
-    .question-panel::before,
-    .question-panel::after {
-        display: none;
-    }
-
     .section-title {
         font-size: 28px;
     }

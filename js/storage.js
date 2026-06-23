@@ -27,7 +27,7 @@ function createSavedBookCard(book) {
             <div class="card-meta">
                 <span class="card-tag">${book.category}</span>
                 <span class="card-author">${book.author}</span>
-            </div>
+            </div> Flutter
             <h3 class="card-title">${book.title}</h3>
             <p class="card-quote">${book.quote}</p>
             <div class="card-detail">

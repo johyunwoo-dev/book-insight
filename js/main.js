@@ -36,6 +36,7 @@ async function copyQuote(quote) {
 }
 
 /* card template */
+// 카드 생성의 핵심
 function createBookCard(book) {
     const card = document.createElement("article");
     card.className = "book-card";

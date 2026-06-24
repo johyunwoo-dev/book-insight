@@ -291,6 +291,7 @@ section {
     background-color: var(--color-accent);
     color: #FFFFFF;
 }
+/* 버튼의 상태를 확장 그림자 추가 */
 .search-button:hover,
 .record-button:hover,
 .login-button:hover,

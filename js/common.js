@@ -2,6 +2,7 @@
 const themeToggle = document.querySelector(".theme-toggle");
 
 /* theme apply */
+// 다크 모드 아이콘 변경
 function applyTheme(isDarkMode) {
     document.body.classList.toggle("dark-mode", isDarkMode);
 

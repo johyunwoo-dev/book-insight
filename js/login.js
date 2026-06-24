@@ -23,6 +23,7 @@ if (passwordToggle) {
 }
 
 /* input */
+// 로그인의 입력을 실시간 타이핑
 if (emailInput && passwordInput && loginButton) {
     emailInput.addEventListener("input", updateLoginState);
     passwordInput.addEventListener("input", updateLoginState);

@@ -86,7 +86,7 @@ function createBookCard(book) {
 
     /* share button */
     card.querySelector(".share-button").addEventListener("click", (event) => {
-        event.stopPropagation();
+        event.stopPropagation(); 
         copyQuote(book.quote);
     });
 
@@ -94,13 +94,14 @@ function createBookCard(book) {
 }
 
 /* render */
+
 function renderBooks(bookData) {
     if (!cardGrid) {
         return;
     }
 
     cardGrid.innerHTML = "";
-
+    // 책 배열에 정보가 없으면 메시지를 띄움
     if (bookData.length === 0) {
         cardGrid.innerHTML = '<p class="empty-message">찾는 카드가 없습니다.</p>';
         return;

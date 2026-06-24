@@ -1,4 +1,5 @@
 /* tablet */
+/* 너비 1024px 이하 */
 @media (max-width: 1024px) {
 
     /* single column layout */

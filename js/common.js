@@ -31,7 +31,7 @@ function showToast(message) {
 // 저장된 테마 유지
 const savedTheme = localStorage.getItem("darkMode") === "true";
 applyTheme(savedTheme);
-
+// 토글 버튼 클릭시 테마 전환
 if (themeToggle) {
     themeToggle.addEventListener("click", () => {
         const nextTheme = !document.body.classList.contains("dark-mode");

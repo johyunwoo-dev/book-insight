@@ -67,6 +67,7 @@ function createBookCard(book) {
     };
 
     /* keyboard */
+    // 엔터와 스페이스 입력으로 상세 페이지
     card.addEventListener("click", toggleCard);
     card.addEventListener("keydown", (event) => {
         if (event.key === "Enter" || event.key === " ") {

@@ -487,6 +487,7 @@ section {
 
     background-color: var(--color-card);
 }
+/* footer 내용 위치 크기 조정 */
 .footer-content {
     display: flex;
     justify-content: center;

@@ -25,6 +25,7 @@ function saveBook(bookId) {
 }
 
 /* copy */
+// 비동기, 예외 처리문
 async function copyQuote(quote) {
     try {
         await navigator.clipboard.writeText(quote);

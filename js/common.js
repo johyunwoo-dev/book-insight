@@ -27,7 +27,7 @@ function showToast(message) {
         toast.remove();
     }, 2200);
 }
-
+// 저장된 테마 유지
 const savedTheme = localStorage.getItem("darkMode") === "true";
 applyTheme(savedTheme);
 

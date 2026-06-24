@@ -124,7 +124,7 @@ function handleSearch() {
         setActiveTag(null);
         return;
     }
-
+    // 필터링된 책 기준을 문자열로 저장
     const filteredBooks = books.filter((book) => {
         const searchableText = `${book.title} ${book.author} ${book.category} ${book.quote}`.toLowerCase();
         return searchableText.includes(searchValue);

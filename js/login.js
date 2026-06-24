@@ -7,6 +7,7 @@ const loginButton = document.querySelector(".login-button");
 
 /* state */
 function updateLoginState() {
+    // 이메일과 비번 입력 상태
     const hasEmail = emailInput.value.trim().length > 0;
     const hasPassword = passwordInput.value.trim().length >= 6;
     loginButton.disabled = !(hasEmail && hasPassword);

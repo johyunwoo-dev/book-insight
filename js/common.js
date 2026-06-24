@@ -17,7 +17,7 @@ function showToast(message) {
     if (previousToast) {
         previousToast.remove();
     }
-
+    // 토스트 생성
     const toast = document.createElement("div");
     toast.className = "toast";
     toast.textContent = message;

@@ -141,6 +141,7 @@
 }
 
 /* small mobile */
+/* 너비 480px 이하 */
 @media (max-width: 480px) {
 
     /* logo */

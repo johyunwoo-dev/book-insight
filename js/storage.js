@@ -45,7 +45,6 @@ function createSavedBookCard(book) {
 
 
 
-    
     const toggleCard = () => {
         card.classList.toggle("active");
     };

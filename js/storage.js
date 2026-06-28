@@ -75,6 +75,7 @@ function renderSavedBooks() {
         return;
     }
 
+    
     savedBooks.forEach((book) => {
         cardGrid.appendChild(createSavedBookCard(book));
     });

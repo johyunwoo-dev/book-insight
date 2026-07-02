@@ -78,5 +78,7 @@ function renderSavedBooks() {
     savedBooks.forEach((book) => {
         cardGrid.appendChild(createSavedBookCard(book));
     });
+}
+
 // 렌더링 함수
 renderSavedBooks();

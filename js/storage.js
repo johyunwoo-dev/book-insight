@@ -19,7 +19,7 @@ function createSavedBookCard(book) {
     const card = document.createElement("article"); //해당 파일에 article 태그를 추가합니다
     card.className = "book-card"; //클래스 이름 부여
     card.tabIndex = 0; // 탭인덱스 0으로 설정해 탭으로 이동 가능
-    card.innerHTML = `
+    card.innerHTML = ` 
         <div class="card-image">
             <img src="${book.image}" alt="${book.title} 표지">
         </div>

@@ -35,7 +35,7 @@ if (emailInput && passwordInput && loginButton) {
 //폼 제출을 통해 로고인 토스트를 올려줍니다.
 if (loginForm) {
     loginForm.addEventListener("submit", (event) => {
-        event.preventDefault();
+        event.preventDefault(); //상위 전파를 막습니다.
         showToast("입력 확인이 완료되었습니다.");
     });
 }

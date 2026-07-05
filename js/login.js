@@ -11,8 +11,8 @@ function updateLoginState() {
     // 이메일과 비번 입력 상태
     const hasEmail = emailInput.value.trim().length > 0; //이메일칸 입력 0글자 이상
     const hasPassword = passwordInput.value.trim().length >= 6; // 비밀번호칸 입력 6글자 이상
-    loginButton.disabled = !(hasEmail && hasPassword);
-}
+    loginButton.disabled = !(hasEmail && hasPassword); // 두 입력 칸 모두 입력이 True일시 비활성화를 풉니다.
+    }
 
 /* password toggle */
 if (passwordToggle) {

@@ -32,6 +32,7 @@ if (emailInput && passwordInput && loginButton) {
 }
 
 /* submit */
+//폼 제출을 통해 로고인 토스트를 올려줍니다.
 if (loginForm) {
     loginForm.addEventListener("submit", (event) => {
         event.preventDefault();

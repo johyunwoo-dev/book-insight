@@ -20,7 +20,7 @@ if (passwordToggle) {
     passwordToggle.addEventListener("click", () => {
         const isPassword = passwordInput.type === "password";
         passwordInput.type = isPassword ? "text" : "password";
-        passwordToggle.textContent = isPassword ? "숨김" : "보기";
+        passwordToggle.textContent = isPassword ? "숨김" : "보기";//이 부분이 변경 부분
     });
 }
 

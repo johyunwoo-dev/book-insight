@@ -15,6 +15,7 @@ function updateLoginState() {
     }
 
 /* password toggle */
+//클릭할시 숨김/보기 버튼을 바꿔 줍니다.
 if (passwordToggle) {
     passwordToggle.addEventListener("click", () => {
         const isPassword = passwordInput.type === "password";

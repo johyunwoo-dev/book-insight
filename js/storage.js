@@ -44,7 +44,7 @@ function createSavedBookCard(book) {
     const toggleCard = () => {
         card.classList.toggle("active");
     };
-
+    //키보드의 상호작용으로 반응합니다.
     /* keyboard */
     card.addEventListener("click", toggleCard);
     card.addEventListener("keydown", (event) => {
@@ -79,16 +79,5 @@ function renderSavedBooks() {
         cardGrid.appendChild(createSavedBookCard(book));
     });
 }
-
-
-
-
-
-
-
-
-
-
-
 // 렌더링 함수
 renderSavedBooks();

@@ -17,7 +17,7 @@ function removeBook(bookId) {
 /* card template */
 function createSavedBookCard(book) {
     const card = document.createElement("article"); //해당 파일에 article 태그를 추가합니다
-    card.className = "book-card";
+    card.className = "book-card"; //클래스 이름 부여
     card.tabIndex = 0;
     card.innerHTML = `
         <div class="card-image">

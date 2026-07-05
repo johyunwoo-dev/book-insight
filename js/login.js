@@ -1,4 +1,5 @@
 /* elements */
+//요소 대입해서 html 파일과  연결합니다.
 const loginForm = document.querySelector(".login-form");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");

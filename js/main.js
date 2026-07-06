@@ -170,7 +170,7 @@ const questions = [
 /* random question */
 if (questionElement) {
     const randomIndex = Math.floor(Math.random() * questions.length); //랜덤한 질문을 선택
-    questionElement.textContent = questions[randomIndex];
+    questionElement.textContent = questions[randomIndex]; //질문을 화면에 출력
 }
 
 renderBooks(books);

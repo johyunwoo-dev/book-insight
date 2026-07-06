@@ -115,7 +115,7 @@ function renderBooks(bookData) {
 /* active tag */
 function setActiveTag(selectedButton) {
     tagButtons.forEach((button) => {
-        button.classList.toggle("is-active", button === selectedButton);
+        button.classList.toggle("is-active", button === selectedButton); //선택된 버튼이 활성화된지 체크한다.
     });
 }
 
@@ -140,7 +140,7 @@ function handleSearch() {
 
 /* search events */
 if (searchButton && searchInput) {
-    searchButton.addEventListener("click", handleSearch);
+    searchButton.addEventListener("click", handleSearch); //클릭
     searchInput.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
             handleSearch();

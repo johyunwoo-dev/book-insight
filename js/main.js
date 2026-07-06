@@ -141,7 +141,7 @@ function handleSearch() {
 /* search events */
 if (searchButton && searchInput) {
     searchButton.addEventListener("click", handleSearch); //클릭
-    searchInput.addEventListener("keydown", (event) => {
+    searchInput.addEventListener("keydown", (event) => { //엔터키
         if (event.key === "Enter") {
             handleSearch();
         }

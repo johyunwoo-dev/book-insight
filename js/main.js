@@ -106,7 +106,7 @@ function renderBooks(bookData) {
         cardGrid.innerHTML = '<p class="empty-message">찾는 카드가 없습니다.</p>';
         return;
     }
-
+    //책 데이터를 반복 순환하면서 책을 생성함.
     bookData.forEach((book) => {
         cardGrid.appendChild(createBookCard(book));
     });

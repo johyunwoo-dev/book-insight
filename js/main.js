@@ -149,7 +149,7 @@ if (searchButton && searchInput) {
 }
 
 /* tag filter */
-tagButtons.forEach((button) => {
+tagButtons.forEach((button) => { //각 버튼에 이벤트를 걸어준다.
     button.addEventListener("click", () => {
         const selectedTag = button.textContent.trim();
         const filteredBooks = books.filter((book) => book.category === selectedTag);

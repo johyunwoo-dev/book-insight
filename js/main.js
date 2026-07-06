@@ -143,7 +143,7 @@ if (searchButton && searchInput) {
     searchButton.addEventListener("click", handleSearch); //클릭
     searchInput.addEventListener("keydown", (event) => { //엔터키
         if (event.key === "Enter") {
-            handleSearch();
+            handleSearch(); //엔터키 입력시 검색
         }
     });
 }
@@ -169,7 +169,7 @@ const questions = [
 
 /* random question */
 if (questionElement) {
-    const randomIndex = Math.floor(Math.random() * questions.length);
+    const randomIndex = Math.floor(Math.random() * questions.length); //랜덤한 질문을 선택
     questionElement.textContent = questions[randomIndex];
 }
 

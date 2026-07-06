@@ -130,7 +130,7 @@ function handleSearch() {
     }
     // 필터링된 책 기준을 문자열로 저장
     const filteredBooks = books.filter((book) => {
-        const searchableText = `${book.title} ${book.author} ${book.category} ${book.quote}`.toLowerCase();
+        const searchableText = `${book.title} ${book.author} ${book.category} ${book.quote}`.toLowerCase(); //책의 제목, 저자, 카테고리, 핵심 문장을 소문자로 변환하여 검색 가능하게 함
         return searchableText.includes(searchValue);
     });
 

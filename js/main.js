@@ -154,7 +154,7 @@ tagButtons.forEach((button) => { //각 버튼에 이벤트를 걸어준다.
         const selectedTag = button.textContent.trim(); //선택된 버튼의 텍스트를 가져온다.
         const filteredBooks = books.filter((book) => book.category === selectedTag); //책 배열에서 선택된 버튼의 카테고리와 일치하는 책을 필터링
         renderBooks(filteredBooks); //필터링된 책을 렌더링
-        setActiveTag(button);
+        setActiveTag(button); //선택된 버튼을 활성화 상태로 변경
     });
 });
 

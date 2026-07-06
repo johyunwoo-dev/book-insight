@@ -38,8 +38,8 @@ async function copyQuote(quote) {
 /* card template */
 // 카드 생성의 핵심
 function createBookCard(book) {
-    const card = document.createElement("article");
-    card.className = "book-card";
+    const card = document.createElement("article"); //카드 요소를 생성
+    card.className = "book-card"; 
     card.tabIndex = 0;
     card.innerHTML = `
         <div class="card-image">
@@ -135,7 +135,7 @@ function handleSearch() {
     });
 
     renderBooks(filteredBooks);
-    setActiveTag(null);
+    setActiveTag(null); 
 }
 
 /* search events */

@@ -3,7 +3,7 @@ const cardGrid = document.querySelector(".card-grid");
 
 /* saved books */
 function getSavedBooks() {
-    return JSON.parse(localStorage.getItem("savedBooks") || "[]"); //
+    return JSON.parse(localStorage.getItem("savedBooks") || "[]"); //savedBooks라는 키로 로컬스토리지에 저장된 데이터를 가져옵니다. 없으면 빈 배열을 반환합니다
 }
 
 /* remove */

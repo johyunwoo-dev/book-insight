@@ -56,7 +56,7 @@ function createSavedBookCard(book) {
 
     /* remove button */
     card.querySelector(".remove-button").addEventListener("click", (event) => { //fremove-button을 클릭하면 이벤트가 발생합니다
-        event.stopPropagation();
+        event.stopPropagation(); //이벤트 전파를 막습니다
         removeBook(book.id);
     });
 

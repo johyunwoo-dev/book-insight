@@ -3,13 +3,13 @@ const cardGrid = document.querySelector(".card-grid");
 
 /* saved books */
 function getSavedBooks() {
-    return JSON.parse(localStorage.getItem("savedBooks") || "[]");
+    return JSON.parse(localStorage.getItem("savedBooks") || "[]"); //
 }
 
 /* remove */
 function removeBook(bookId) {
     const updatedBooks = getSavedBooks().filter((id) => id !== bookId); //id와 일치하는 북아이디를 불러옵니다
-    localStorage.setItem("savedBooks", JSON.stringify(updatedBooks)); //로컬스토리지에 저장된 북아이디를 불러옵니다
+    localStorage.setItem("savedBooks", JSON.stringify(updatedBooks)); //로컬스토리지에 저장된 북아이디를 저장합니다
     renderSavedBooks();
     showToast("보관함에서 삭제했습니다.");
 }

@@ -8,8 +8,8 @@ function getSavedBooks() {
 
 /* remove */
 function removeBook(bookId) {
-    const updatedBooks = getSavedBooks().filter((id) => id !== bookId);
-    localStorage.setItem("savedBooks", JSON.stringify(updatedBooks));
+    const updatedBooks = getSavedBooks().filter((id) => id !== bookId); //id와 일치하는 북아이디를 저장합니다.
+    localStorage.setItem("savedBooks", JSON.stringify(updatedBooks)); 
     renderSavedBooks();
     showToast("보관함에서 삭제했습니다.");
 }

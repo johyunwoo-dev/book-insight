@@ -9,7 +9,7 @@ function getSavedBooks() {
 /* remove */
 function removeBook(bookId) {
     const updatedBooks = getSavedBooks().filter((id) => id !== bookId); //id와 일치하는 북아이디를 불러옵니다
-    localStorage.setItem("savedBooks", JSON.stringify(updatedBooks)); 
+    localStorage.setItem("savedBooks", JSON.stringify(updatedBooks)); //로컬스토리지에 저장된 북아이디를 불러옵니다
     renderSavedBooks();
     showToast("보관함에서 삭제했습니다.");
 }

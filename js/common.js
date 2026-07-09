@@ -20,7 +20,7 @@ function showToast(message) {
         previousToast.remove(); //이전에 생성된 토스트가 있으면 제거합니다
     }
     // 토스트 생성
-    const toast = document.createElement("div");
+    const toast = document.createElement("div"); //div 요소를 생성합니다
     toast.className = "toast";
     toast.textContent = message;
     document.body.appendChild(toast);

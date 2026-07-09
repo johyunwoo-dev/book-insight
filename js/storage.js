@@ -70,7 +70,7 @@ function renderSavedBooks() {
 
     cardGrid.innerHTML = "";
 
-    if (savedBooks.length === 0) {
+    if (savedBooks.length === 0) { //savedBooks의 길이가 0이면 글을 보여줍니다
         cardGrid.innerHTML = '<p class="empty-message">아직 저장한 카드가 없습니다.</p>';
         return;
     }

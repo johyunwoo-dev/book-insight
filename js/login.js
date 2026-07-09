@@ -19,7 +19,7 @@ function updateLoginState() {
 if (passwordToggle) {
     passwordToggle.addEventListener("click", () => {
         const isPassword = passwordInput.type === "password"; //패스워드 입력칸에 입력된 타입이 패스워드인지 확인합니다
-        passwordInput.type = isPassword ? "text" : "password";
+        passwordInput.type = isPassword ? "text" : "password";//패스워드일시 텍스트 타입으로 바꿈으로 보이게 합니다
         passwordToggle.textContent = isPassword ? "숨김" : "보기";//이 부분이 변경 부분
     });
 }

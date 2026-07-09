@@ -25,7 +25,7 @@ function showToast(message) {
     toast.textContent = message;
     document.body.appendChild(toast);
 
-    window.setTimeout(() => {
+    window.setTimeout(() => { //시간의 경과 후 토스트를 제거합니다
         toast.remove();
     }, 2200);
 }

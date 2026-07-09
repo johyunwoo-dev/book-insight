@@ -14,7 +14,7 @@ function applyTheme(isDarkMode) {
 /* toast */
 //이전 토스트를 찾아서 제거합니다
 function showToast(message) { 
-    const previousToast = document.querySelector(".toast"); 
+    const previousToast = document.querySelector(".toast"); //.toast 클래스를 
 
     if (previousToast) {
         previousToast.remove(); //이전에 생성된 토스트가 있으면 제거합니다

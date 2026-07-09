@@ -21,7 +21,7 @@ function showToast(message) {
     }
     // 토스트 생성
     const toast = document.createElement("div"); //div 요소를 생성합니다
-    toast.className = "toast";
+    toast.className = "toast"; //toast 클래스를 부여합니다
     toast.textContent = message;
     document.body.appendChild(toast);
 

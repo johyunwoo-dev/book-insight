@@ -29,7 +29,7 @@ function showToast(message) {
     }, 2200);
 }
 // 저장된 테마 유지
-const savedTheme = localStorage.getItem("darkMode") === "true";
+const savedTheme = localStorage.getItem("darkMode") === "true"; //다크 모드 여부를 로컬스토리지에서 가져옵니다
 applyTheme(savedTheme);
 // 토글 버튼 클릭시 테마 전환
 if (themeToggle) {

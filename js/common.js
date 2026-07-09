@@ -36,6 +36,6 @@ if (themeToggle) {
     themeToggle.addEventListener("click", () => { //클릭시 이벤트가 발생합니다
         const nextTheme = !document.body.classList.contains("dark-mode"); //현재 다크 모드 여부를 확인하고 그 반대를 nextTheme에 저장합니다
         localStorage.setItem("darkMode", String(nextTheme)); //로컬스토리지에 nextTheme을 저장합니다
-        applyTheme(nextTheme);
+        applyTheme(nextTheme); //applyTheme 함수를 호출하여 테마를 적용합니다
     });
 }

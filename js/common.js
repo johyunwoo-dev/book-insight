@@ -22,7 +22,7 @@ function showToast(message) {
     // 토스트 생성
     const toast = document.createElement("div"); //div 요소를 생성합니다
     toast.className = "toast"; //toast 클래스를 부여합니다
-    toast.textContent = message; //토스트에 전달된 메시지를 텍스트를 부여합니다
+    toast.textContent = message; //토스트에 전달된 메시지를 텍스트를 글자를 변경합니다
     document.body.appendChild(toast);
 
     window.setTimeout(() => { //시간의 경과 후 토스트를 제거합니다

@@ -5,15 +5,15 @@ const themeToggle = document.querySelector(".theme-toggle");
 // 다크 모드 아이콘 변경
 function applyTheme(isDarkMode) {
     document.body.classList.toggle("dark-mode", isDarkMode); //다크 모드 여부를 확인하고 다크모드를 적용합니다
-    
+
     if (themeToggle) {
         themeToggle.textContent = isDarkMode ? "☼" : "☾";
     }
 }
 
 /* toast */
-function showToast(message) {
-    const previousToast = document.querySelector(".toast");
+function showToast(message) { 
+    const previousToast = document.querySelector(".toast"); //이전 토스트를 찾아서 제거합니다
 
     if (previousToast) {
         previousToast.remove();

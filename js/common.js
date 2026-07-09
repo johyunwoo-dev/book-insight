@@ -33,7 +33,7 @@ const savedTheme = localStorage.getItem("darkMode") === "true"; //다크 모드 
 applyTheme(savedTheme);
 // 토글 버튼 클릭시 테마 전환
 if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
+    themeToggle.addEventListener("click", () => { //클릭시 이벤트가 발생합니다
         const nextTheme = !document.body.classList.contains("dark-mode");
         localStorage.setItem("darkMode", String(nextTheme));
         applyTheme(nextTheme);

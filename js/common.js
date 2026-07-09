@@ -17,7 +17,7 @@ function showToast(message) {
     const previousToast = document.querySelector(".toast"); 
 
     if (previousToast) {
-        previousToast.remove(); 
+        previousToast.remove(); //이전에 생성된 토스트가 있으면 제거합니다
     }
     // 토스트 생성
     const toast = document.createElement("div");

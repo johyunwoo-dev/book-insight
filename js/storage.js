@@ -65,7 +65,7 @@ function createSavedBookCard(book) {
 
 /* render */
 function renderSavedBooks() {
-    const savedBookIds = getSavedBooks();
+    const savedBookIds = getSavedBooks(); //저장된 책의 ID를 가져옵니다
     const savedBooks = books.filter((book) => savedBookIds.includes(book.id)); //books 배열에서 저장된 북아이디에 해당하는 책을 필터링합니다
 
     cardGrid.innerHTML = "";

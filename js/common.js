@@ -1,5 +1,5 @@
 /* theme toggle */
-const themeToggle = document.querySelector(".theme-toggle");
+const themeToggle = document.querySelector(".theme-toggle"); 
 
 /* theme apply */
 // 다크 모드 아이콘 변경

@@ -7,7 +7,7 @@ function applyTheme(isDarkMode) {
     document.body.classList.toggle("dark-mode", isDarkMode); //다크 모드 여부를 확인하고 다크모드를 적용합니다
 
     if (themeToggle) {
-        themeToggle.textContent = isDarkMode ? "☼" : "☾";
+        themeToggle.textContent = isDarkMode ? "☼" : "☾"; //다크 모드일시 햇님 아이콘, 아닐시 달 아이콘으로 변경합니다
     }
 }
 

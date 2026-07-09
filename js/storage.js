@@ -75,7 +75,7 @@ function renderSavedBooks() {
         return;
     }
 
-    savedBooks.forEach((book) => {
+    savedBooks.forEach((book) => { //저장된 책들을 돌면서 카드를 생성하고 추가합니다
         cardGrid.appendChild(createSavedBookCard(book));
     });
 }

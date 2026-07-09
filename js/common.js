@@ -12,11 +12,12 @@ function applyTheme(isDarkMode) {
 }
 
 /* toast */
+//이전 토스트를 찾아서 제거합니다
 function showToast(message) { 
-    const previousToast = document.querySelector(".toast"); //이전 토스트를 찾아서 제거합니다
+    const previousToast = document.querySelector(".toast"); 
 
     if (previousToast) {
-        previousToast.remove();
+        previousToast.remove(); 
     }
     // 토스트 생성
     const toast = document.createElement("div");
